@@ -8,14 +8,26 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:cypress/recommended"
+    ]
+  },
   "dependencies": {
+    "axios": "^0.27.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
+    "cypress": "^10.4.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "vite": "^3.0.0"
   }
 }
