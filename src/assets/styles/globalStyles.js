@@ -3,6 +3,17 @@
 const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
+
+    // Css Color Variables
+    --bg-grey: #2E2828;
+    --icon-bg-grey: #8e86863b;
+    --placeholder-text-grey: #888888;
+    --subtitle-text-grey: #ADA8A8;
+    --text-white: #FAFAFA;
+    --primary: #231227;
+    --secondary: #F65151;
+
+    background-color: var(--bg-grey);
   }
 
   /* RESET CSS - MEYERWEB
@@ -37,6 +48,24 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     line-height: 1;
+    // Css Fonts Config
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    transition: all 0.5s ease-in-out;
+
+    .--sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
   }
   ol, ul {
     list-style: none;
