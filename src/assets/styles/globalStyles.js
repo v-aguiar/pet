@@ -11,7 +11,9 @@ const GlobalStyles = createGlobalStyle`
     --subtitle-text-grey: #ADA8A8;
     --text-white: #FAFAFA;
     --primary: #231227;
+    --primary-t: #231227e8;
     --secondary: #F65151;
+    --secondary-t: #f65151c2;
 
     background-color: var(--bg-grey);
   }
@@ -38,8 +40,12 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
+
     vertical-align: baseline;
+    // Css Fonts Config
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
@@ -48,10 +54,6 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     line-height: 1;
-    // Css Fonts Config
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
 
     transition: all 0.5s ease-in-out;
 
