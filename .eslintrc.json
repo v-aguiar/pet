@@ -3,7 +3,12 @@
     "browser": true,
     "es6": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react/jsx-runtime"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:styled-components-a11y/recommended"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -11,9 +16,11 @@
     "ecmaVersion": 2021,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "styled-components-a11y"],
   "rules": {
     "react/prop-types": 0,
-    "no-unused-vars": "warn"
+    "no-unused-vars": "warn",
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/label-has-associated-control": 0
   }
 }

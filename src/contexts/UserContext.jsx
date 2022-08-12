@@ -10,8 +10,6 @@ export const UserProvider = ({ children }) => {
   if (token) {
     const config = { headers: { Authorization: `Bearer ${token}` } };
     user = getById(config);
-
-    console.log("user: ", user);
   }
 
   const values = { token, setToken, user };

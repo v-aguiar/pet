@@ -1,13 +1,16 @@
-﻿import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+﻿import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/Button";
+
 import useInput from "../../hooks/useInput.jsx";
+import useLoading from "../../hooks/useLoading.jsx";
+
 import api from "../../services/api.js";
 
 import { StyledForm } from "./style.jsx";
 
 export default function SignInForm() {
+  const [loading, loadingComponent, setLoading] = useLoading();
   const [email, emailInput] = useInput({ id: "email", placeholder: "Email", required: true });
   const [password, passwordInput] = useInput({
     id: "password",
@@ -15,7 +18,7 @@ export default function SignInForm() {
     type: "password",
     required: true
   });
-  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -30,7 +33,7 @@ export default function SignInForm() {
     try {
       const { data } = await api.post("/sign-in", { ...values });
       localStorage.setItem("token", JSON.stringify(data.token));
-      navigate("/sign-up"); // TODO: redirect to /feed
+      navigate("/"); // TODO: redirect to /feed
       setLoading(false);
     } catch (error) {
       alert(error.response.data);
@@ -51,8 +54,10 @@ export default function SignInForm() {
       </label>
       {passwordInput}
       <Button type="submit" disabled={loading}>
-        {loading ? "Loading..." : "Entrar"}
+        Entrar
       </Button>
+
+      {loading && loadingComponent}
     </StyledForm>
   );
 }

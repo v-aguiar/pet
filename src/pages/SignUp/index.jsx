@@ -1,9 +1,11 @@
 ﻿import { Link } from "react-router-dom";
 
-import logo from "../../assets/logo.svg";
-import SignUpForm from "./SignUpForm.jsx";
+import { SignUpProvider } from "../../contexts/SignUpContext.jsx";
 
+import SignUpForm from "./SignUpForm.jsx";
 import { BottomText, Logo, StyledSignUp, Title } from "./style.jsx";
+
+import logo from "../../assets/logo.svg";
 
 export default function SignUp() {
   return (
@@ -11,7 +13,9 @@ export default function SignUp() {
       <Logo src={logo} alt="logo" />
       <Title>Cadastre-se</Title>
 
-      <SignUpForm />
+      <SignUpProvider>
+        <SignUpForm />
+      </SignUpProvider>
 
       <Link to="/">
         <BottomText>Já possui uma conta? Clique aqui!</BottomText>

@@ -1,11 +1,10 @@
-﻿export default function LocationForm({
-  cepInput,
-  cityInput,
-  stateInput,
-  districtInput,
-  streetNameInput,
-  complementInput
-}) {
+﻿import { useContext } from "react";
+import { SignUpContext } from "../../contexts/SignUpContext.jsx";
+
+export default function LocationInputs() {
+  const { cepInput, cityInput, stateInput, districtInput, streetNameInput, complementInput } =
+    useContext(SignUpContext);
+
   return (
     <>
       <p>Dados - Localidade</p>
