@@ -8,11 +8,12 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 6,
+    "ecmaVersion": 2021,
     "sourceType": "module"
   },
   "plugins": ["react"],
   "rules": {
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "no-unused-vars": "warn"
   }
 }
