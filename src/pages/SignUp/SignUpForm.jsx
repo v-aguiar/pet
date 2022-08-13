@@ -15,7 +15,7 @@ import { createUser } from "../../services/user.js";
 export default function SignUpForm() {
   const navigate = useNavigate();
 
-  const { role, loading, setLoading, loadingComponent } = useContext(SignUpContext);
+  const { role, loading, setLoading, LoadingModal } = useContext(SignUpContext);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -40,7 +40,7 @@ export default function SignUpForm() {
       <LocationInputs />
       <Button type="submit">Entrar</Button>
 
-      {loading && loadingComponent}
+      {loading && <LoadingModal />}
     </StyledForm>
   );
 }

@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --primary-t: #231227e8;
     --secondary: #F65151;
     --secondary-t: #f65151c2;
+    --bg-footer: #8e868630;
 
     background-color: var(--bg-grey);
   }
