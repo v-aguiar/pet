@@ -3,8 +3,9 @@
 export const StyledHeader = styled.header`
   position: fixed;
   top: 1.375rem;
-  left: 0;
+  left: (50%);
   width: 100%;
+  max-width: 46.875rem;
   height: 2.8125rem;
 
   margin: 0 auto;
@@ -15,6 +16,20 @@ export const StyledHeader = styled.header`
   padding: 0 1.5625rem;
 
   background-color: inherit;
+
+  .menu-button {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: inherit;
+  }
+
+  .register-button {
+    width: 2.2rem;
+    height: 2.2rem;
+
+    color: var(--text-white);
+    background-color: var(--icon-bg-grey);
+  }
 `;
 
 export const StyledForm = styled.form`

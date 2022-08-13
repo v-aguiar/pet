@@ -1,4 +1,5 @@
-﻿import { BiSearchAlt } from "react-icons/bi";
+﻿import { BiSearchAlt, BiMenuAltLeft } from "react-icons/bi";
+import { FaCat } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 
 import useInput from "../../hooks/useInput.jsx";
@@ -11,27 +12,31 @@ export default function Header() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(search);
+    console.log(search); // TODO -> search by category
   }
 
   return (
     <StyledHeader>
-      <span>Menu</span>
-      <StyledForm onSubmit={handleSubmit}>
-        <SearchInput />
-        <IconContext.Provider
-          value={{
-            style: {
-              backgroundColor: "transparent"
-            }
-          }}
-        >
+      <IconContext.Provider
+        value={{
+          style: {
+            backgroundColor: "transparent"
+          }
+        }}
+      >
+        <Button className="menu-button">
+          <BiMenuAltLeft />
+        </Button>
+        <StyledForm onSubmit={handleSubmit}>
+          <SearchInput />
           <Button className="search-button">
-            <BiSearchAlt />
+            <BiSearchAlt size="1.1rem" />
           </Button>
-        </IconContext.Provider>
-      </StyledForm>
-      <span>Patinha :3</span>
+        </StyledForm>
+        <Button className="register-button">
+          <FaCat size="0.875rem" />
+        </Button>
+      </IconContext.Provider>
     </StyledHeader>
   );
 }

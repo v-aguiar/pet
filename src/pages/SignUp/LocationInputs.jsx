@@ -12,32 +12,32 @@ export default function LocationInputs() {
       <label className="--sr-only" htmlFor="cep">
         CEP
       </label>
-      {CepInput}
+      <CepInput />
 
       <label className="--sr-only" htmlFor="city">
         Cidade
       </label>
-      {CityInput}
+      <CityInput />
 
       <label className="--sr-only" htmlFor="state">
         Estado
       </label>
-      {StateInput}
+      <StateInput />
 
       <label className="--sr-only" htmlFor="district">
         Bairro
       </label>
-      {DistrictInput}
+      <DistrictInput />
 
       <label className="--sr-only" htmlFor="streetName">
         Nome da rua ou similar
       </label>
-      {StreetNameInput}
+      <StreetNameInput />
 
       <label className="--sr-only" htmlFor="complement">
         Complemento
       </label>
-      {ComplementInput}
+      <ComplementInput />
     </>
   );
 }

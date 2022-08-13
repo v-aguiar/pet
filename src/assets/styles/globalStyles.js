@@ -15,8 +15,6 @@ const GlobalStyles = createGlobalStyle`
     --secondary: #F65151;
     --secondary-t: #f65151c2;
     --bg-footer: #8e868630;
-
-    background-color: var(--bg-grey);
   }
 
   /* RESET CSS - MEYERWEB
@@ -53,10 +51,13 @@ const GlobalStyles = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  body {
-    line-height: 1;
+  html {
+    height: 100%;
 
     transition: all 0.5s ease-in-out;
+  }
+  body {
+    line-height: 1;
 
     .--sr-only {
       position: absolute;
@@ -68,6 +69,11 @@ const GlobalStyles = createGlobalStyle`
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border-width: 0;
+    }
+
+    #root {
+      background-color: var(--bg-grey);
+      height: 100%;
     }
   }
   ol, ul {

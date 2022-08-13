@@ -2,7 +2,7 @@
 
 export const StyledFeed = styled.section`
   /* max-width: 425px; */
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   background-color: var(--primary);
