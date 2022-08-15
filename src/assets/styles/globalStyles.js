@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     // Css Color Variables
     --bg-grey: #2E2828;
     --icon-bg-grey: #8e86863b;
+    --icon-bg-white: #FEF4F4;
     --placeholder-text-grey: #888888;
     --subtitle-text-grey: #ADA8A8;
     --text-white: #FAFAFA;
@@ -14,8 +15,7 @@ const GlobalStyles = createGlobalStyle`
     --primary-t: #231227e8;
     --secondary: #F65151;
     --secondary-t: #f65151c2;
-
-    background-color: var(--bg-grey);
+    --bg-footer: #8e868630;
   }
 
   /* RESET CSS - MEYERWEB
@@ -52,10 +52,13 @@ const GlobalStyles = createGlobalStyle`
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-  body {
-    line-height: 1;
+  html {
+    height: 100%;
 
     transition: all 0.5s ease-in-out;
+  }
+  body {
+    line-height: 1;
 
     .--sr-only {
       position: absolute;
@@ -67,6 +70,11 @@ const GlobalStyles = createGlobalStyle`
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border-width: 0;
+    }
+
+    #root {
+      background-color: var(--bg-grey);
+      height: 100%;
     }
   }
   ol, ul {

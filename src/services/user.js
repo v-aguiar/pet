@@ -23,3 +23,20 @@ export function createUser(data) {
       return { error };
     });
 }
+
+export function searchByPetType(petType, token) {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  };
+  return api
+    .get(`/input/category/${petType}`, config)
+    .then((res) => {
+      return res.data;
+    })
+    .catch((error) => {
+      console.error(error);
+      return { error };
+    });
+}

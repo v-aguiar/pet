@@ -14,11 +14,11 @@ export const TabButton = styled.button`
   }
 
   &&.customButton {
-    padding: 0.5rem 0.8rem;
+    padding: 0.5rem 0.5rem;
 
     background-color: var(--bg-grey);
     color: var(--placeholder-text-grey);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 400;
     font-family: "Poppins", sans-serif;
     border: 0;

@@ -69,7 +69,7 @@ export const SignUpProvider = ({ children }) => {
     type: "number"
   });
 
-  const [loading, loadingComponent, setLoading] = useLoading();
+  const [loading, loadingModal, setLoading] = useLoading();
 
   function handleRoleClick(e) {
     const hashRoles = {
@@ -115,7 +115,7 @@ export const SignUpProvider = ({ children }) => {
     cep,
     cepInput,
     loading,
-    loadingComponent,
+    loadingModal,
     setLoading
   };
 
