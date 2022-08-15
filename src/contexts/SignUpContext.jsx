@@ -25,43 +25,43 @@ export const SignUpProvider = ({ children }) => {
     }
   };
 
-  const [name, NameInput] = useInput({ id: "name", placeholder: "Nome", required: true });
-  const [email, EmailInput] = useInput({ id: "email", placeholder: "Email", required: true });
-  const [phoneNumber, PhoneNumberInput] = useInput({
+  const [name, nameInput] = useInput({ id: "name", placeholder: "Nome", required: true });
+  const [email, emailInput] = useInput({ id: "email", placeholder: "Email", required: true });
+  const [phoneNumber, phoneNumberInput] = useInput({
     id: "phoneNumber",
     placeholder: "Telefone (ex. 77999999999)",
     type: "number",
     required: true
   });
-  const [imgUrl, ImgUrlInput] = useInput({
+  const [imgUrl, imgUrlInput] = useInput({
     id: "imgUrl",
     placeholder: "Imagem de perfil",
     type: "url",
     required: true
   });
-  const [password, PasswordInput] = useInput({
+  const [password, passwordInput] = useInput({
     id: "password",
     placeholder: "Senha",
     type: "password",
     required: true
   });
-  const [confirmPassword, ConfirmPasswordInput] = useInput({
+  const [confirmPassword, confirmPasswordInput] = useInput({
     id: "confirmPassword",
     placeholder: "Confirmar senha",
     type: "password",
     required: true
   });
-  const [description, DescriptionInput] = useInput({ id: "description", placeholder: "Descrição (Bio)" });
-  const [city, CityInput, setCity] = useInput({ id: "city", placeholder: "Cidade", required: true });
-  const [state, StateInput, setState] = useInput({ id: "state", placeholder: "Estado", required: true });
-  const [district, DistrictInput, setDistrict] = useInput({ id: "district", placeholder: "Bairro" });
-  const [streetName, StreetNameInput, setStreetName] = useInput({
+  const [description, descriptionInput] = useInput({ id: "description", placeholder: "Descrição (Bio)" });
+  const [city, cityInput, setCity] = useInput({ id: "city", placeholder: "Cidade", required: true });
+  const [state, stateInput, setState] = useInput({ id: "state", placeholder: "Estado", required: true });
+  const [district, districtInput, setDistrict] = useInput({ id: "district", placeholder: "Bairro" });
+  const [streetName, streetNameInput, setStreetName] = useInput({
     id: "streetName",
     placeholder: "Rua, avenida ou similar",
     required: true
   });
-  const [complement, ComplementInput] = useInput({ id: "complement", placeholder: "Complemento" });
-  const [cep, CepInput] = useInput({
+  const [complement, complementInput] = useInput({ id: "complement", placeholder: "Complemento" });
+  const [cep, cepInput] = useInput({
     onBlur: checkCEP,
     id: "cep",
     placeholder: "CEP",
@@ -69,7 +69,7 @@ export const SignUpProvider = ({ children }) => {
     type: "number"
   });
 
-  const [loading, LoadingComponent, setLoading] = useLoading();
+  const [loading, loadingModal, setLoading] = useLoading();
 
   function handleRoleClick(e) {
     const hashRoles = {
@@ -85,37 +85,37 @@ export const SignUpProvider = ({ children }) => {
     role,
     handleRoleClick,
     name,
-    NameInput,
+    nameInput,
     email,
-    EmailInput,
+    emailInput,
     phoneNumber,
-    PhoneNumberInput,
+    phoneNumberInput,
     imgUrl,
-    ImgUrlInput,
+    imgUrlInput,
     password,
-    PasswordInput,
+    passwordInput,
     confirmPassword,
-    ConfirmPasswordInput,
+    confirmPasswordInput,
     description,
-    DescriptionInput,
+    descriptionInput,
     city,
-    CityInput,
+    cityInput,
     setCity,
     state,
-    StateInput,
+    stateInput,
     setState,
     district,
-    DistrictInput,
+    districtInput,
     setDistrict,
     streetName,
-    StreetNameInput,
+    streetNameInput,
     setStreetName,
     complement,
-    ComplementInput,
+    complementInput,
     cep,
-    CepInput,
+    cepInput,
     loading,
-    LoadingComponent,
+    loadingModal,
     setLoading
   };
 

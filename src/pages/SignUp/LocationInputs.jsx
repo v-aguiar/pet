@@ -2,7 +2,7 @@
 import { SignUpContext } from "../../contexts/SignUpContext.jsx";
 
 export default function LocationInputs() {
-  const { CepInput, CityInput, StateInput, DistrictInput, StreetNameInput, ComplementInput } =
+  const { cepInput, cityInput, stateInput, districtInput, streetNameInput, complementInput } =
     useContext(SignUpContext);
 
   return (
@@ -12,32 +12,32 @@ export default function LocationInputs() {
       <label className="--sr-only" htmlFor="cep">
         CEP
       </label>
-      <CepInput />
+      {cepInput}
 
       <label className="--sr-only" htmlFor="city">
         Cidade
       </label>
-      <CityInput />
+      {cityInput}
 
       <label className="--sr-only" htmlFor="state">
         Estado
       </label>
-      <StateInput />
+      {stateInput}
 
       <label className="--sr-only" htmlFor="district">
         Bairro
       </label>
-      <DistrictInput />
+      {districtInput}
 
       <label className="--sr-only" htmlFor="streetName">
         Nome da rua ou similar
       </label>
-      <StreetNameInput />
+      {streetNameInput}
 
       <label className="--sr-only" htmlFor="complement">
         Complemento
       </label>
-      <ComplementInput />
+      {complementInput}
     </>
   );
 }

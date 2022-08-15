@@ -12,9 +12,9 @@ import api from "../../services/api.js";
 import { StyledForm } from "./style.jsx";
 
 export default function SignInForm() {
-  const [loading, LoadingModal, setLoading] = useLoading();
-  const [email, EmailInput] = useInput({ id: "email", placeholder: "Email", required: true });
-  const [password, PasswordInput] = useInput({
+  const [loading, loadingModal, setLoading] = useLoading();
+  const [email, emailInput] = useInput({ id: "email", placeholder: "Email", required: true });
+  const [password, passwordInput] = useInput({
     id: "password",
     placeholder: "Senha",
     type: "password",
@@ -51,17 +51,17 @@ export default function SignInForm() {
       <label className="--sr-only" htmlFor="email">
         Email
       </label>
-      {EmailInput}
+      {emailInput}
 
       <label className="--sr-only" htmlFor="password">
         Senha
       </label>
-      {PasswordInput}
+      {passwordInput}
       <Button type="submit" disabled={loading}>
         Entrar
       </Button>
 
-      {loading && <LoadingModal />}
+      {loading && loadingModal}
     </StyledForm>
   );
 }

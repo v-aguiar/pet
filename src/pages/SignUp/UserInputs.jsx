@@ -6,13 +6,13 @@ import ButtonGroup from "../../components/ButtonGroup";
 export default function UserInputs() {
   const {
     handleRoleClick,
-    NameInput,
-    EmailInput,
-    PhoneNumberInput,
-    ImgUrlInput,
-    PasswordInput,
-    ConfirmPasswordInput,
-    DescriptionInput
+    nameInput,
+    emailInput,
+    phoneNumberInput,
+    imgUrlInput,
+    passwordInput,
+    confirmPasswordInput,
+    descriptionInput
   } = useContext(SignUpContext);
 
   return (
@@ -24,37 +24,37 @@ export default function UserInputs() {
       <label className="--sr-only" htmlFor="name">
         Nome
       </label>
-      <NameInput />
+      {nameInput}
 
       <label className="--sr-only" htmlFor="email">
         Email
       </label>
-      <EmailInput />
+      {emailInput}
 
       <label className="--sr-only" htmlFor="password">
         Senha
       </label>
-      <PasswordInput />
+      {passwordInput}
 
       <label className="--sr-only" htmlFor="confirmPassword">
         Confirmar senha
       </label>
-      <ConfirmPasswordInput />
+      {confirmPasswordInput}
 
       <label className="--sr-only" htmlFor="phoneNumber">
         Número de telefone
       </label>
-      <PhoneNumberInput />
+      {phoneNumberInput}
 
       <label className="--sr-only" htmlFor="imgUrl">
         Url da imagem de perfil
       </label>
-      <ImgUrlInput />
+      {imgUrlInput}
 
       <label className="--sr-only" htmlFor="description">
         Descrição (Bio)
       </label>
-      <DescriptionInput />
+      {descriptionInput}
     </>
   );
 }

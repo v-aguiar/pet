@@ -15,20 +15,22 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  background-color: inherit;
+  background-color: transparent;
 
-  .menu-button {
+  .--btn-contact {
     width: 2.2rem;
     height: 2.2rem;
-    background-color: inherit;
+
+    background-color: var(--icon-bg-white);
+    color: var(--secondary);
   }
 
-  .register-button {
+  .--btn-back {
     width: 2.2rem;
     height: 2.2rem;
 
-    color: var(--text-white);
-    background-color: var(--icon-bg-grey);
+    background-color: var(--icon-bg-white);
+    color: var(--bg-grey);
   }
 `;
 

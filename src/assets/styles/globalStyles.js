@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     // Css Color Variables
     --bg-grey: #2E2828;
     --icon-bg-grey: #8e86863b;
+    --icon-bg-white: #FEF4F4;
     --placeholder-text-grey: #888888;
     --subtitle-text-grey: #ADA8A8;
     --text-white: #FAFAFA;

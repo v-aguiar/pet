@@ -14,7 +14,7 @@ export const StyledLoading = styled.div`
   font-weight: 700;
   font-style: italic;
 
-  position: fixed;
+  position: absolute;
   top: 10%;
   left: 0;
 
