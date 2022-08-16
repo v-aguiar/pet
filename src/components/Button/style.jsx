@@ -15,6 +15,10 @@ export const StyledButton = styled.button`
   width: 100%;
   height: 2.8125rem;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &&:hover {
     filter: brightness(1.2);
     cursor: pointer;
