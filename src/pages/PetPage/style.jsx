@@ -4,10 +4,8 @@ export const StyledPetSection = styled.section`
   height: 100vh;
   width: 100%;
 
-  background-color: var(--primary);
+  background-color: var(--icon-bg-grey);
   color: var(--text-white);
-
-  /* padding-top: 6rem; */
 
   display: flex;
   flex-direction: column;
@@ -15,23 +13,125 @@ export const StyledPetSection = styled.section`
 `;
 
 export const StyledPetContainer = styled.div`
-  background-size: contain;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  max-width: 46.875rem;
+
+  background-color: var(--icon-bg-grey);
+
+  > img {
+    width: 100%;
+    max-height: 25rem;
+    background-size: contain;
+  }
 `;
 
 export const StyledDescription = styled.div`
-  height: 15.1875rem;
+  height: 100%;
   width: 100%;
+  max-width: 46.875rem;
 
-  padding: 42px 25px;
+  padding: 2.625rem 1.5625rem 4.5625rem 1.5625rem;
+  margin-top: -2rem;
 
   background-color: var(--primary);
-  color: var(--text-white);
 
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  border-radius: 1.25rem 1.25rem 0px 0px;
+
+  overflow-y: auto;
+`;
+
+export const StyledNameTitle = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  > p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  > span {
+    margin-top: 0.5rem;
+
+    color: var(--secondary-t);
+    font-size: 0.875rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+`;
+
+export const PetCharacteristics = styled.div`
+  width: 100%;
+  margin: 1.25rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`;
+
+export const CareTakerInfo = styled.div`
+  margin-bottom: 1.5rem;
+
+  height: 3.125rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .caretaker-info {
+    display: flex;
+    align-items: center;
+
+    > img {
+      border-radius: 50%;
+      width: 3.125rem;
+    }
+
+    > span {
+      > p:first-of-type {
+        font-size: 0.625rem;
+        color: var(--secondary);
+
+        margin-bottom: 0.25rem;
+      }
+
+      > p:last-of-type {
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .caretaker-contact-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    > .btn {
+      width: 3rem;
+      border-radius: 50%;
+    }
+  }
+`;
+
+export const PetDescription = styled.p`
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: justify;
 `;
