@@ -34,7 +34,8 @@ export const StyledDescription = styled.div`
   width: 100%;
   max-width: 46.875rem;
 
-  padding: 2.625rem 1.5625rem;
+  padding: 2.625rem 1.5625rem 4.5625rem 1.5625rem;
+  margin-top: -2rem;
 
   background-color: var(--primary);
 
@@ -43,8 +44,6 @@ export const StyledDescription = styled.div`
   align-items: center;
 
   border-radius: 1.25rem 1.25rem 0px 0px;
-
-  margin-top: -2rem;
 
   overflow-y: auto;
 `;
@@ -97,6 +96,25 @@ export const CareTakerInfo = styled.div`
   .caretaker-info {
     display: flex;
     align-items: center;
+
+    > img {
+      border-radius: 50%;
+      width: 3.125rem;
+    }
+
+    > span {
+      > p:first-of-type {
+        font-size: 0.625rem;
+        color: var(--secondary);
+
+        margin-bottom: 0.25rem;
+      }
+
+      > p:last-of-type {
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
   }
 
   .caretaker-contact-buttons {
@@ -113,5 +131,7 @@ export const CareTakerInfo = styled.div`
 `;
 
 export const PetDescription = styled.p`
-  margin-bottom: 2.625rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: justify;
 `;
