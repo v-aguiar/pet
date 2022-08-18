@@ -1,7 +1,7 @@
 ﻿import styled from "styled-components";
 
 export const StyledSignIn = styled.section`
-  height: 100%;
+  height: 100vh;
 
   padding: 0 1.5625rem;
   max-width: 425px;
