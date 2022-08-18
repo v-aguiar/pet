@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
     --icon-bg-white: #FEF4F4;
     --placeholder-text-grey: #888888;
     --subtitle-text-grey: #ADA8A8;
+    --text-grey-card: #5F5B5B;
     --text-white: #FAFAFA;
     --primary: #231227;
     --primary-t: #231227e8;

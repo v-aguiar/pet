@@ -32,7 +32,7 @@ export default function PetPage() {
       </StyledPetContainer>
 
       <StyledDescription>
-        <ExpandableContent expandText="" collapseText="" showIcon={false} maxHeight={374} darkMode={true}>
+        <ExpandableContent expandText="" collapseText="" showIcon={false} maxHeight={362} darkMode={true}>
           <StyledNameTitle>
             <p>Pet Name</p>
             <span>
@@ -85,7 +85,7 @@ export default function PetPage() {
         </ExpandableContent>
       </StyledDescription>
 
-      <Footer>Footer</Footer>
+      <Footer />
     </StyledPetSection>
   );
 }
