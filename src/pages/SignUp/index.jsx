@@ -7,7 +7,7 @@ import { BottomText, Logo, StyledSignUp, Title } from "./style.jsx";
 
 import logo from "../../assets/logo.svg";
 
-export default function SignUp() {
+export const SignUp = () => {
   return (
     <StyledSignUp>
       <Logo src={logo} alt="logo" />
@@ -22,4 +22,4 @@ export default function SignUp() {
       </Link>
     </StyledSignUp>
   );
-}
+};

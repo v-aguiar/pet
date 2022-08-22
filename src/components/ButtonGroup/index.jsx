@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+﻿import { useState, useId } from "react";
 import { TabButton, StyledButtonGroup } from "./style.jsx";
 
 export default function ButtonGroup({ buttons, callback }) {
@@ -11,17 +11,20 @@ export default function ButtonGroup({ buttons, callback }) {
 
   return (
     <StyledButtonGroup>
-      {buttons.map((buttonLabel, i) => (
-        <TabButton
-          key={i}
-          name={buttonLabel}
-          onClick={(event) => handleClick(event, i)}
-          className={i === clickedId ? "customButton active" : "customButton"}
-          type="button"
-        >
-          {buttonLabel}
-        </TabButton>
-      ))}
+      {buttons.map((buttonLabel) => {
+        const id = useId();
+        return (
+          <TabButton
+            key={id}
+            name={buttonLabel}
+            onClick={(event) => handleClick(event, id)}
+            className={id === clickedId ? "customButton active" : "customButton"}
+            type="button"
+          >
+            {buttonLabel}
+          </TabButton>
+        );
+      })}
     </StyledButtonGroup>
   );
 }

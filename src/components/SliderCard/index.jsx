@@ -3,11 +3,9 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 import { StyledCard } from "./style.jsx";
 
-export const SliderCard = ({ imgUrl, name, sex, location }) => {
-  console.log({ imgUrl, name, sex, location });
-
+export const SliderCard = ({ imgUrl, name, sex, location, onClick }) => {
   return (
-    <StyledCard>
+    <StyledCard onClick={onClick}>
       <img src={imgUrl} alt="card img" />
       <span>
         <p>{name}</p>

@@ -54,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
     display: block;
   }
   html {
-    height: 100%;
+    /* height: 100%; */
 
     transition: all 0.5s ease-in-out;
   }
@@ -75,7 +75,7 @@ const GlobalStyles = createGlobalStyle`
 
     #root {
       background-color: var(--bg-grey);
-      height: 100%;
+      /* height: 100vh; */
     }
   }
   ol, ul {

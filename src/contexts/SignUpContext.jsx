@@ -21,7 +21,7 @@ export const SignUpProvider = ({ children }) => {
       setStreetName(data.logradouro);
     } catch (error) {
       window.alert("⚠ CEP não encontrado...");
-      console.log(error);
+      console.error(error);
     }
   };
 

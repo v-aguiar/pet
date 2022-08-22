@@ -1,12 +1,12 @@
 ﻿import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Button from "../../components/Button";
+import { SignUpContext } from "../../contexts/SignUpContext.jsx";
 
+import Button from "../../components/Button";
 import LocationInputs from "./LocationInputs.jsx";
 import UserInputs from "./UserInputs.jsx";
 
-import { SignUpContext } from "../../contexts/SignUpContext.jsx";
 import { StyledForm } from "./style.jsx";
 
 import { getInputDataFromSubmitEvent } from "./utils/signUpUtils.js";

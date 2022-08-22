@@ -11,7 +11,7 @@ export const StyledFooter = styled.footer`
   margin: 0 auto;
   padding: 0 2.6875rem;
 
-  background-color: var(--bg-footer);
+  background-color: var(--bg-grey);
 
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;

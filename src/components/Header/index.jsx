@@ -11,6 +11,7 @@ import Button from "../Button/index.jsx";
 import { StyledHeader, StyledForm } from "./style.jsx";
 
 import { searchByPetType } from "../../services/user.js";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [search, searchInput] = useInput({ id: "search", type: "text", placeholder: "Busca (ex: gato)" });
@@ -19,10 +20,12 @@ export default function Header() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("search: ", search); // TODO -> search by category
 
-    const response = searchByPetType(search, token);
-    console.log("response", response);
+    setTimeout(() => {
+      // TODO -> finish search by category
+      const response = searchByPetType(search, token);
+      console.log("response", response);
+    }, 3000);
   }
 
   return (
@@ -45,9 +48,11 @@ export default function Header() {
           </Button>
         </StyledForm>
 
-        <Button className="register-button">
-          <FaCat size="0.875rem" />
-        </Button>
+        <Link to="/pets/register">
+          <Button className="register-button">
+            <FaCat size="0.875rem" />
+          </Button>
+        </Link>
       </IconContext.Provider>
     </StyledHeader>
   );
