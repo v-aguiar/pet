@@ -5,7 +5,7 @@ import SignInForm from "./SignInForm.jsx";
 
 import logo from "../../assets/logo.svg";
 
-export default function SignIn() {
+export const SignIn = () => {
   return (
     <StyledSignIn>
       <Logo src={logo} alt="logo" />
@@ -22,4 +22,4 @@ export default function SignIn() {
       </Link>
     </StyledSignIn>
   );
-}
+};

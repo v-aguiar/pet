@@ -1,15 +1,7 @@
 ﻿import api from "./api.js";
 
-export function getById(config) {
-  return api
-    .get("/users/", config)
-    .then((res) => {
-      return res.data;
-    })
-    .catch((error) => {
-      console.error(error);
-      return { error };
-    });
+export async function getById(config) {
+  return await api.get("/users/", config);
 }
 
 export function createUser(data) {

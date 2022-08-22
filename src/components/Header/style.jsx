@@ -15,7 +15,7 @@ export const StyledHeader = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  background-color: inherit;
+  background-color: transparent;
 
   .menu-button {
     width: 2.2rem;

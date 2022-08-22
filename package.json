@@ -18,11 +18,13 @@
   "dependencies": {
     "axios": "^0.27.2",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.8",
     "react-dom": "^18.2.0",
     "react-expandable-content": "^1.0.7",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.15",
