@@ -74,6 +74,10 @@ const GlobalStyles = createGlobalStyle`
       white-space: nowrap;
       border-width: 0;
     }
+
+    #root {
+      height: 100%;
+    }
   }
   ol, ul {
     list-style: none;

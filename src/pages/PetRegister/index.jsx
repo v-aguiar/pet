@@ -9,7 +9,7 @@ import { StyledPetRegister } from "./style.jsx";
 export const PetRegister = () => {
   return (
     <StyledPetRegister>
-      <SecondaryHeader />
+      <SecondaryHeader title="Pet Registration" />
 
       <PetRegisterProvider>
         <PetRegisterForm />

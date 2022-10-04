@@ -1,7 +1,7 @@
 ﻿import styled from "styled-components";
 
 export const StyledPetRegister = styled.section`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   padding: 6rem 1.5625rem;
 
@@ -34,8 +34,6 @@ export const SelectInputs = styled.div`
 
   width: 100%;
 
-  margin-bottom: 1rem;
-
   && :nth-child(2) {
     margin: 0 1rem;
   }
@@ -67,5 +65,25 @@ export const SelectInputs = styled.div`
         border-bottom-right-radius: 1rem;
       }
     }
+  }
+`;
+
+export const SpayedOrNeuteredContainer = styled.div`
+  width: 100%;
+  margin-bottom: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  > p {
+    color: var(--placeholder-text-grey);
+    font-size: small;
+  }
+
+  > span {
+    margin-left: 1rem;
+    width: 6rem;
+    padding-top: 1rem;
   }
 `;

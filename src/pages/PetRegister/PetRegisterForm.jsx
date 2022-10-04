@@ -7,8 +7,10 @@ import ButtonGroup from "../../components/ButtonGroup/index.jsx";
 import { PetRegisterContext } from "../../contexts/PetRegisterContext.jsx";
 import { UserContext } from "../../contexts/UserContext.jsx";
 
-import { SelectInputs, StyledPetForm } from "./style.jsx";
-import api from "../../services/api.js"; // TODO -> create a service function to handle pet registration
+import { SelectInputs, SpayedOrNeuteredContainer, StyledPetForm } from "./style.jsx";
+import api from "../../services/api.js";
+// TODO -> create a service function to handle pet registration
+// TODO -> refactor this component to use React hooks
 
 export const PetRegisterForm = () => {
   const [spayedOrNeutered, setSpayedOrNeutered] = useState(false);
@@ -96,8 +98,6 @@ export const PetRegisterForm = () => {
       </label>
       {descriptionInput}
 
-      <ButtonGroup buttons={["Sim", "Não"]} callback={handleButtonChange} />
-
       <SelectInputs>
         <select name="type" form="pet-register-form" onChange={handleSelectChange} required>
           <option value={null}>Tipo</option>
@@ -121,6 +121,13 @@ export const PetRegisterForm = () => {
           <option value="temporaryCare">Lar Temporário</option>
         </select>
       </SelectInputs>
+
+      <SpayedOrNeuteredContainer>
+        <p>O pet é castrado?</p>
+        <span>
+          <ButtonGroup buttons={["Sim", "Não"]} callback={handleButtonChange} />
+        </span>
+      </SpayedOrNeuteredContainer>
 
       <Button type="submit" disabled={loading}>
         Cadastrar

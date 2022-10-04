@@ -7,7 +7,7 @@ import Button from "../Button/index.jsx";
 
 import { StyledHeader } from "./style.jsx";
 
-export default function SecondaryHeader() {
+export default function SecondaryHeader({ title = "" }) {
   return (
     <StyledHeader>
       <IconContext.Provider
@@ -22,6 +22,8 @@ export default function SecondaryHeader() {
             <BsArrowLeft />
           </Button>
         </Link>
+
+        <h1>{title}</h1>
 
         <Button className="--btn-contact">
           <BsFillPersonLinesFill size="0.875rem" />
