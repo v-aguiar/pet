@@ -1,7 +1,7 @@
 ﻿import styled from "styled-components";
 
 export const StyledPetRegister = styled.section`
-  /* height: 100vh; */
+  height: 100vh;
   width: 100%;
   padding: 6rem 1.5625rem;
 

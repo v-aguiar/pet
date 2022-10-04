@@ -54,12 +54,14 @@ const GlobalStyles = createGlobalStyle`
     display: block;
   }
   html {
-    /* height: 100%; */
+    position: relative;
 
     transition: all 0.5s ease-in-out;
   }
   body {
+    height: 100vh;
     line-height: 1;
+    background-color: var(--bg-grey);
 
     .--sr-only {
       position: absolute;
@@ -71,11 +73,6 @@ const GlobalStyles = createGlobalStyle`
       clip: rect(0, 0, 0, 0);
       white-space: nowrap;
       border-width: 0;
-    }
-
-    #root {
-      background-color: var(--bg-grey);
-      /* height: 100vh; */
     }
   }
   ol, ul {

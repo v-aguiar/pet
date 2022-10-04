@@ -31,9 +31,6 @@ export const PetPage = () => {
   const [userData, setUserData] = useState(null);
   const { id } = useParams();
 
-  console.log("petData: ", pet);
-  console.log("userData: ", userData);
-
   const { token, loading, setLoading, loadingModal } = useContext(UserContext);
 
   useEffect(() => {
@@ -45,7 +42,7 @@ export const PetPage = () => {
         setUserData({ ...petData.user, ...petData.user.UserLocation[0] });
         setLoading(false);
       } catch (error) {
-        console.log("⚠ Something went wrong when fetching pet data: ", error);
+        console.error("⚠ Something went wrong when fetching pet data: ", error);
         setLoading(false);
       }
     };
